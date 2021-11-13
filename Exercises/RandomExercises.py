@@ -112,3 +112,4 @@ def encode_password(password:str, hash_type:str = 'sha1'):
 
 
 encode_password('ksdsads03')
+

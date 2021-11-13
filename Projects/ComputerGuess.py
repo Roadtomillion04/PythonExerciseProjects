@@ -35,3 +35,4 @@ def play_game(min_value: int, max_value: int):
 
 if __name__ == '__main__':
     play_game(1, 1000)
+

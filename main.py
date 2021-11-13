@@ -1,4 +1,4 @@
-lists = [1, 2, 4, 7, 6]
+lists = [1, 2,  4, 7, 6]
 print(lists.reverse())
 
 

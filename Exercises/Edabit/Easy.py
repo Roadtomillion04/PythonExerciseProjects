@@ -62,28 +62,28 @@ def stutter(word:str):
 
 
 '''Inclusive list ranges'''
-# def inclusive_list(start:int, end:int):
-#     print(list(range(start, end+1) if start<end else [start]))
-# inclusive_list(1, 5)
-# inclusive_list(15, 5)
+def inclusive_list(start:int, end:int):
+    print(list(range(start, end+1) if start<end else [start]))
+inclusive_list(1, 5)
+inclusive_list(15, 5)
 
 
 '''Vowel replacer'''
-# def vowel_replacer(txt:str, symbol):
-#     for x in txt:
-#         if x in 'aeiou':
-#             txt = txt.replace(x, symbol)
-#     print(txt)
-# vowel_replacer('asdsseii', '?')
+def vowel_replacer(txt:str, symbol):
+    for x in txt:
+        if x in 'aeiou': #The in keyword is used to check if a value is present in a sequence
+            txt = txt.replace(x, symbol)
+    print(txt)
+vowel_replacer('asdsseii', '?')
 
 
 '''Programming polygot - assign points to language and display them'''
-def get_languages(points:int):
-    program_lang = {'c#': 1, 'c++': 2, 'java': 10, 'python': 32}
-    for k, v in program_lang.items():
-        if points > v:
-            print(k, v)
-get_languages(10)
+# def get_languages(points:int):
+#     program_lang = {'c#': 1, 'c++': 2, 'java': 10, 'python': 32}
+#     for k, v in program_lang.items():
+#         if points > v:
+#             print(k, v)
+#get_languages(10)
 
 
 '''acronymes '''
@@ -97,5 +97,57 @@ get_languages(10)
 #     print(a)
 # acronymes('Aritfi Intell mac lear')
 
+
+'''Hiding card number'''
+def hide_card_num(num:str):
+    if num.isdigit():
+        split_num = num[:-4]
+        tail = num[-4:]
+        split_num = len(split_num) * '*'
+        print(split_num + tail)
+hide_card_num('7392047324974')
+
+
+'''Return true if x == o times'''
+# def XO(txt:str):
+#     x_count = txt.count('x')
+#     o_count = txt.count('o')
+#     if x_count == o_count:
+#         return True
+#     elif (x_count and o_count) == 0:
+#         return True
+#     else:
+#         return False
+#
+# print(XO('ooxxox'))
+# print(XO('ooxxx'))
+# print(XO('asdfg'))
+
+
+'''shuffle the name'''
+def shuffle_name(name:str):
+    first, last = name.split()[0], name.split()[1]
+    return ' '.join([last, first])
+print(shuffle_name('Nirmal Kumar'))
+
+
+'''hamming distance if two str dosent matches count'''
+# def hamming_distance(str1, str2):
+#     counter = 0
+#     a = len(str1)
+#     b = len(str2)
+#
+#     if a == b:
+#         if str1 == str2:
+#             print(0)
+#
+#         else:
+#             for idx in range(a): # grabbing index and checking down below
+#                 if str1[idx] != str2[idx]:
+#                     counter += 1
+#
+#             print(counter)
+# hamming_distance('asd', 'asd')
+# hamming_distance('purple', 'purely')
 
 

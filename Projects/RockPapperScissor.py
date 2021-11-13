@@ -14,7 +14,7 @@ print('Welcome to fucking Rock Papper Scissor game and pick your options')
 def run_game(rounds:int):
     user_wins:int = 0
     pc_wins:int = 0
-    win_necessary = math.ceil(rounds/2) # ceil divides to half for even and half+1 for odd
+    win_necessary = math.ceil(rounds/2) # ceil divides n/2 for even, n/2 + 1 for odd
     print(win_necessary)
 
 
